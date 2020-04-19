@@ -1,0 +1,210 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>WELCOME TO SIGN_UP</title>
+    <style>
+
+body{
+    margin: 0;
+    padding: 0;
+    background: url(back.jpg)no-repeat center center fixed;
+    font-family: sans-serif;
+}
+
+.box{
+
+ 
+    background: #f5f5f5;
+    color: red;
+    top: 50%;
+    left: 30%;
+    position: absolute;
+    transform: translate(-50%,-50%);
+    box-sizing: border-box;
+    padding: 70px 30px;
+}
+
+
+
+.user{
+    width: 100px;
+    height: 100px;
+    position: absolute;
+    top: -50px;
+    left: calc(50% - 50px);
+}
+
+h1{
+    margin: 0;
+    padding: 0 0 20px;
+    text-align: center;
+    font-size: 22px;
+    color: black;
+}
+
+p{
+    color: #f49126;
+    margin: 0;
+    padding: 0;
+    font-weight: bold;
+}
+
+input{
+    width: 100%;
+    margin-bottom: 10px;
+}
+
+ input[type="text"], input[type="password"] ,input[type="email"]
+{
+    border: none;
+    border-bottom: 1px solid #fff;
+    background: transparent;
+    outline: none;
+    height: 40px;
+    color: #673ab7;
+    font-size: 16px;
+}
+
+input[type="submit"]
+{
+    border: none;
+    outline: none;
+    height: 40px;
+    background: #2196f3;
+    color: #fff;
+    font-size: 18px;
+    border-radius: 20px;
+
+}
+
+
+input[type="submit"]:hover
+{
+    cursor: pointer;
+    background: #0097a7;
+}
+
+a
+{
+    text-decoration: none;
+    font-size: 16px;
+    line-height: 20px;
+    color: #069818;
+}
+
+
+a:hover
+{
+    color: red;
+}
+
+
+    </style>
+    <script type="text/javascript" src="app.js"></script>
+    <script>
+
+        
+       //form 1
+
+       function vfun(){
+            var uname=document.forms["myform"]["uname"].value;
+            var upswd=document.forms["myform"]["upswd"].value;
+
+        if(uname==null || uname=="" ){
+                  document.getElementById("errorBox").innerHTML =
+                   "enter the user name";
+                 return false;
+        }
+
+        if(upswd==null || upswd==""){
+                  document.getElementById("errorBox").innerHTML =
+                   "enter the password";
+                 return false;
+        }
+
+        if (uname != '' && upswd != '' ){
+         alert("Login successfully");
+                         }
+
+        }
+
+ //form 2
+
+  function vfun1(){
+            var uname1=document.forms["myform2"]["uname1"].value;
+            var email1=document.forms["myform2"]["email1"].value;
+            var upswd1=document.forms["myform2"]["upswd1"].value;
+            var upswd2=document.forms["myform2"]["upswd2"].value;
+
+
+        if(uname1==null || uname1=="" ){
+                  document.getElementById("errorBox").innerHTML =
+                   "enter the user name";
+                 return false;
+        }
+
+        if(email1==null || email1==""){
+                  document.getElementById("errorBox").innerHTML =
+                   "enter the email";
+                 return false;
+        }
+
+        if(upswd1==null || upswd1=="" ){
+                  document.getElementById("errorBox").innerHTML =
+                   "enter the password";
+                 return false;
+        }
+
+        if(upswd2==null || upswd2==""){
+                  document.getElementById("errorBox").innerHTML =
+                   "enter the password";
+                 return false;}
+
+ 		if(upswd1 != upswd2){
+                  document.getElementById("errorBox").innerHTML =
+                   "password dont match";
+                 return false;}
+
+        
+
+        if (uname1 != '' && upswd1 != '' && upswd2 != '' && email1 != '' && upswd1 == upswd2)
+
+
+          alert("Register successfull");
+                         
+
+        }
+
+    </script>
+</head>
+<body>
+    <div class="box">
+        <img src="user.png" class="user">
+            <h1>Register Here</h1>
+    
+            <form name="myform2" onsubmit="return vfun1()" method="POST">
+    
+                <p>Username</p>
+                <input type="text" name="uname1" placeholder="Enter Username">
+    
+                <p>Email</p>
+                <input type="Email" name="email1" placeholder="Enter email id">
+    
+                <p>Password</p>
+                <input type="password" name="upswd1" placeholder="Enter Password">
+    
+                <p>Retype Password</p>
+                <input type="password" name="upswd2" placeholder="Re-Enter Password">
+    
+                 <div id="errorBox"></div>
+                <input type="submit" name="" value="Register" formaction="http://localhost:8000/yoursysteminfo">
+    
+                <br><br>
+                <a href="http://localhost:8000">existing user, login !?</a>
+            </form>
+            
+    </div>
+</body>
+</html>

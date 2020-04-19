@@ -1,0 +1,539 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dashboard</title>
+    <style>
+        *{
+            padding: 0;
+            margin: 0;
+            text-decoration: none;
+            list-style: none;
+            box-sizing: border-box;
+        }
+        body{
+            font-family: montserrat;
+        }
+        #test{
+        color: white;
+        margin: 0;
+        padding: 0;
+        font-size: 20px;
+        font-weight: bold;
+        }
+        #test1{
+        color: white;
+        margin: 0;
+        padding: 0;
+        font-size: 20px;
+        font-weight: bold;
+        }
+        #test2{
+        color: #ffffff;
+        margin: 0;
+        padding: 0;
+        font-size: 20px;
+        font-weight: bold;
+        }
+        #test3{
+        color: white;
+        margin: 0;
+        padding: 0;
+        font-size: 20px;
+        font-weight: bold;
+        }
+        #test4{
+        color: white;
+        margin: 0;
+        padding: 0;
+        font-size: 20px;
+        font-weight: bold;
+        }
+        #test5{
+        color: white;
+        margin: 0;
+        padding: 0;
+        font-size: 20px;
+        font-weight: bold;
+        }
+        #test6{
+        color:white;
+        margin: 0;
+        padding: 0;
+        font-size: 20px;
+        font-weight: bold;
+        }
+        #test7{
+        color:white;
+        margin: 0;
+        padding: 0;
+        font-size: 20px;
+        font-weight: bold;
+        }
+        #test8{
+        color: white;
+        margin: 0;
+        padding: 0;
+        font-size: 20px;
+        font-weight: bold;
+        }
+        #test9{
+        color:olive;
+        margin: 0;
+        padding: 0;
+        font-size: 20px;
+        font-weight: bold;
+        }
+        #test10{
+        color:olive;
+        margin: 0;
+        padding: 0;
+        font-size: 20px;
+        font-weight: bold;
+        }
+        #test11{
+        color:olive;
+        margin: 0;
+        padding: 0;
+        font-size: 20px;
+        font-weight: bold;
+        }
+        #test12{
+        color:olive;
+        margin: 0;
+        padding: 0;
+        font-size: 20px;
+        font-weight: bold;
+        }
+        #test13{
+        color:olive;
+        margin: 0;
+        padding: 0;
+        font-size: 20px;
+        font-weight: bold;
+        }
+        .para{
+            width: 800px;
+            margin: 0px auto;
+        }
+        h3{
+        color:darksalmon;
+        margin: 0;
+        padding: 0;
+        font-size: 30px;
+        font-weight: bold;
+        }
+        .scroll{
+            background-color:#2c3e50;
+        }
+        .footer{
+            background-color:#2c3e50;
+            color:white;
+            font-size: 25px;
+            font-weight: bold;
+            height: 80px;
+            text-align: center;
+        }
+        nav{
+            background: #008fff;
+            height: 80px;
+            width: 100%;
+        }
+        label.logo{
+            color: white;
+            font-size: 25px;
+            line-height: 80px;
+            padding: 0 100px;
+            font-weight: bold;
+        }
+        nav ul{
+            float: right;
+            margin-right: 20px;
+        }
+        nav ul li {
+            display: inline-block;
+            line-height: 80px;
+            margin: 0 50px;
+        }
+        nav ul li a{
+            color: white;
+            font-size: 17px;
+            padding: 7px 13px;
+            border-radius: 3px;
+            text-transform: uppercase;
+        }
+        a.active,a:hover{
+            background: #1b9bff;
+            transition: .5s;
+        }
+        .checkbtn{
+            font-size:30px;
+            color: white;
+            float: right;
+            line-height: 80px;
+            margin-right: 40px;
+            cursor: pointer;
+            display: none;
+        }
+        #check{
+            display: none;
+        }
+        @media (max-width: 952px){
+            label.logo{
+                font-size: 30px;
+                padding-left: 50px;
+            }
+            nav ul li a{
+                font-size: 16px;
+            }
+        }
+        @media (max-width:858px){
+            .checkbtn{
+                display: block;
+            }
+            ul{
+                position: fixed;
+                width: 100%;
+                height:100vh;
+                background: #2c3e50;
+                top: 80px;
+                left: 0;
+                text-align: center;
+            }
+            nav ul li{
+                display:block;
+                margin: 50px 0;
+                line-height: 30px;
+            }
+            nav ul li a{
+                font-size: 20px;
+            }
+            a.hover,a.active{
+                background: none;
+                color: #0082e6;
+            }
+            #check:checked~ul{
+                left: 0;
+            }
+        }
+        section{
+            background:url("./back1.png")no-repeat;
+            background-size: cover;
+        }
+    </style>
+</head>
+<body>
+    <nav>
+        <input type="checkbox" id="check">
+        <label for="check" class="checkbtn">
+            <i class="fas fa-bars"></i>
+        </label>
+        <label class="logo">Systeminfo</label>
+        <ul>
+            <li><a class="active" href="#">home</a></li>
+            <li><a href="#test1">CPU</a></li>
+            <li><a href="#test7">User</a></li>
+            <li><a href="#test9">OS</a></li>
+            <li><a href="http://localhost:8000">Sign_out</a></li>
+        </ul>
+    </nav>
+    <section>
+        <br>
+        <br>
+        <h3><p style="text-align: center;">YOUR SYSTEM INFO</p></h3>
+        <br>
+        <br>
+
+        <div class="para">
+
+
+
+
+
+            <h3>MEMORY</h3>
+            <br>
+            <p id="test"></p>
+            <script id="jsbin-javascript">
+            /* Creating a JSON object with JSON data*/
+            var obj = 
+                '{"totalmem":"Totalmem:  592.46875 MB","freemem":"Freemem:  97.44140625 MB","homedir": "Homedir:  /home/rnithin133","hostname": "Hostname:  server-1"}';
+            
+            /* Parsing the JSON data*/
+            var text = JSON.parse(obj);
+            
+            /* Displaying the JSON data by linking the #test paragraph tag and the JSON object*/
+            document.getElementById("test").innerHTML = text.totalmem + "<br>" + text.freemem + "<br>" + text.homedir + "<br>" + text.hostname;
+            </script>
+            
+            
+            
+            <script id="jsbin-source-javascript" type="text/javascript">/* Creating a JSON object with JSON data*/
+            var obj = 
+                '{ "totalmem":"Totalmem:  592.46875 MB","freemem":"Freemem:  97.44140625 MB","homedir": "Homedir:  /home/rnithin133","hostname": "Hostname:  server-1"}';
+            
+            /* Parsing the JSON data*/
+            var text = JSON.parse(obj);
+            
+            /* Displaying the JSON data by linking the #test paragraph tag and the JSON object*/
+            document.getElementById("test").innerHTML = text.totalmem + "<br>" + text.freemem + "<br>" + text.homedir + "<br>" + text.hostname;
+            </script>
+
+            
+            <br>
+            <br>
+
+            <h3>CPU</h3>
+            <br>
+            <p id="test1" class="button"></p>
+            <script id="jsbin-javascript">
+            /* Creating a JSON object with JSON data*/
+            var obj = 
+                '{ "cpus":"CPUs"}';
+
+            /* Parsing the JSON data*/
+            var text = JSON.parse(obj);
+
+            /* Displaying the JSON data by linking the #test paragraph tag and the JSON object*/
+            document.getElementById("test1").innerHTML = text.cpus;
+            </script>
+
+
+
+            <script id="jsbin-source-javascript" type="text/javascript">/* Creating a JSON object with JSON data*/
+            var obj = 
+                '{ "cpus":"CPUs"}';
+
+            /* Parsing the JSON data*/
+            var text = JSON.parse(obj);
+
+            /* Displaying the JSON data by linking the #test paragraph tag and the JSON object*/
+            document.getElementById("test1").innerHTML = text.cpus;
+            </script>
+
+
+            <p id="test2"></p>
+            <script id="jsbin-javascript">
+            /* Creating a JSON object with JSON data*/
+            var obj = 
+                '{ "model":"Model:  Intel(R) Xeon(R) CPU @ 2.30GHz","speed":"Speed:  2300"}';
+
+            /* Parsing the JSON data*/
+            var text = JSON.parse(obj);
+
+            /* Displaying the JSON data by linking the #test paragraph tag and the JSON object*/
+            document.getElementById("test2").innerHTML = text.model+"<br>"+text.speed;
+            </script>
+
+
+
+            <script id="jsbin-source-javascript" type="text/javascript">/* Creating a JSON object with JSON data*/
+            var obj = 
+                '{"model":"Model:  Intel(R) Xeon(R) CPU @ 2.30GHz","speed":"Speed:  2300"}';
+
+            /* Parsing the JSON data*/
+            var text = JSON.parse(obj);
+
+            /* Displaying the JSON data by linking the #test paragraph tag and the JSON object*/
+            document.getElementById("test2").innerHTML = text.model+"<br>"+text.speed;
+            </script>
+
+
+
+
+
+
+
+
+            <p id="test3"></p>
+            <script id="jsbin-javascript">
+            /* Creating a JSON object with JSON data*/
+            var obj = 
+                '{ "times":"Times"}';
+
+            /* Parsing the JSON data*/
+            var text = JSON.parse(obj);
+
+            /* Displaying the JSON data by linking the #test paragraph tag and the JSON object*/
+            document.getElementById("test3").innerHTML = text.times;
+            </script>
+
+
+
+            <script id="jsbin-source-javascript" type="text/javascript">/* Creating a JSON object with JSON data*/
+            var obj = 
+                '{ "times":"Times"}';
+
+            /* Parsing the JSON data*/
+            var text = JSON.parse(obj);
+
+            /* Displaying the JSON data by linking the #test paragraph tag and the JSON object*/
+            document.getElementById("test3").innerHTML = text.times;
+            </script>
+
+
+
+
+
+
+
+
+
+
+            <p id="test4"></p>
+            <script id="jsbin-javascript">
+            /* Creating a JSON object with JSON data*/
+            var obj = 
+                '{"user":"User:  42221200","nice":"Nice:  97600","sys":"Sys:  15177000","idle":"Idle:  17079675500","irq":"Irq:  0"}';
+
+            /* Parsing the JSON data*/
+            var text = JSON.parse(obj);
+
+            /* Displaying the JSON data by linking the #test paragraph tag and the JSON object*/
+            document.getElementById("test4").innerHTML = text.user + "<br>" + text.nice + "<br>" + text.sys + "<br>" + text.idle+"<br>"+text.irq;
+            </script>
+
+
+
+            <script id="jsbin-source-javascript" type="text/javascript">/* Creating a JSON object with JSON data*/
+            var obj = 
+                '{ "user":"User:  42221200","nice":"Nice:  97600","sys":"Sys:  15177000","idle":"Idle:  17079675500","irq":"Irq:  0"}';
+
+            /* Parsing the JSON data*/
+            var text = JSON.parse(obj);
+
+            /* Displaying the JSON data by linking the #test paragraph tag and the JSON object*/
+            document.getElementById("test4").innerHTML = text.user + "<br>" + text.nice + "<br>" + text.sys + "<br>" + text.idle+"<br>"+text.irq;
+            </script>
+
+
+            <br>
+            <br>
+            <br>
+            <br>
+
+
+            <h3>USER</h3>
+            <br>
+
+            <p id="test6"></p>
+            <script id="jsbin-javascript">
+            /* Creating a JSON object with JSON data*/
+            var obj = 
+                '{ "platform": "Platform:  linux","uptime_seconds":"Uptime_seconds:  1713538","uptime": "Uptime:Up time is : 19 days : 19 hrs : 58 min : 58 sec"}';
+
+            /* Parsing the JSON data*/
+            var text = JSON.parse(obj);
+
+            /* Displaying the JSON data by linking the #test paragraph tag and the JSON object*/
+            document.getElementById("test6").innerHTML = text.platform + "<br>" + text.uptime_seconds + "<br>" + text.uptime ;
+            </script>
+
+
+
+            <script id="jsbin-source-javascript" type="text/javascript">/* Creating a JSON object with JSON data*/
+            var obj = 
+                '{"platform": "Platform:  linux","uptime_seconds":"Uptime_seconds:  1713538","uptime": "Uptime:Up time is : 19 days : 19 hrs : 58 min : 58 sec"}';
+
+            /* Parsing the JSON data*/
+            var text = JSON.parse(obj);
+
+            /* Displaying the JSON data by linking the #test paragraph tag and the JSON object*/
+            document.getElementById("test6").innerHTML =text.platform + "<br>" + text.uptime_seconds + "<br>" + text.uptime ;
+            </script>
+
+
+            <p id="test7"></p>
+            <script id="jsbin-javascript">
+            /* Creating a JSON object with JSON data*/
+            var obj = 
+                '{ "userinfo":"Userinfo"}';
+
+            /* Parsing the JSON data*/
+            var text = JSON.parse(obj);
+
+            /* Displaying the JSON data by linking the #test paragraph tag and the JSON object*/
+            document.getElementById("test7").innerHTML = text.userinfo;
+            </script>
+
+
+
+            <script id="jsbin-source-javascript" type="text/javascript">/* Creating a JSON object with JSON data*/
+            var obj = 
+                '{ "userinfo":"Userinfo"}';
+
+            /* Parsing the JSON data*/
+            var text = JSON.parse(obj);
+
+            /* Displaying the JSON data by linking the #test paragraph tag and the JSON object*/
+            document.getElementById("test7").innerHTML = text.userinfo;
+            </script>
+
+            <p id="test8"></p>
+            <script id="jsbin-javascript">
+            /* Creating a JSON object with JSON data*/
+            var obj = 
+                '{"uid":"Uid:  1000","gid": "Gid:  1001","username": "Username:  rnithin133","homedir": "Homedir:  /home/rnithin133","shell": "Shell:  /bin/bash"}';
+
+            /* Parsing the JSON data*/
+            var text = JSON.parse(obj);
+
+            /* Displaying the JSON data by linking the #test paragraph tag and the JSON object*/
+            document.getElementById("test8").innerHTML = text.uid + "<br>" + text.gid + "<br>" + text.username + "<br>" + text.homedir +"<br>"+text.shell;
+            </script>
+
+
+
+            <script id="jsbin-source-javascript" type="text/javascript">/* Creating a JSON object with JSON data*/
+            var obj = 
+                '{"uid":"Uid:  1000","gid": "Gid:  1001","username": "Username:  rnithin133","homedir": "Homedir:  /home/rnithin133","shell": "Shell:  /bin/bash"}';
+
+            /* Parsing the JSON data*/
+            var text = JSON.parse(obj);
+
+            /* Displaying the JSON data by linking the #test paragraph tag and the JSON object*/
+            document.getElementById("test8").innerHTML =text.uid + "<br>" + text.gid + "<br>" + text.username + "<br>" + text.homedir +"<br>"+text.shell;
+            </script>
+
+
+
+            <br>
+            <br>
+            <h3>OS</h3>
+            <br>
+
+            <p id="test9"></p>
+            <script id="jsbin-javascript">
+            /* Creating a JSON object with JSON data*/
+            var obj = 
+                '{"release": "Release:  4.9.0-12-amd64","type": "Type:  Linux"}';
+
+            /* Parsing the JSON data*/
+            var text = JSON.parse(obj);
+
+            /* Displaying the JSON data by linking the #test paragraph tag and the JSON object*/
+            document.getElementById("test9").innerHTML = text.release + "<br>" + text.type ;
+            </script>
+
+
+
+            <script id="jsbin-source-javascript" type="text/javascript">/* Creating a JSON object with JSON data*/
+            var obj = 
+                '{"release": "Release:  4.9.0-12-amd64","type": "Type:  Linux"}';
+
+            /* Parsing the JSON data*/
+            var text = JSON.parse(obj);
+
+            /* Displaying the JSON data by linking the #test paragraph tag and the JSON object*/
+            document.getElementById("test9").innerHTML = text.release + "<br>" + text.type ;
+            </script>
+            <br>
+            <br>
+        </div>
+        <br>
+        <div class="footer"><p>Your viewing the system info</p>
+        <a href="http://localhost:8000"><button style="color:gray;" value="Sign_out"> Sign_out</button></a>
+        </div>
+    </section>
+</body>
+</html>
